@@ -2,8 +2,11 @@
 module.exports = {
   title: '도큐사우르스 러닝 가이드',
   tagline: '콘텐츠에 보다 집중할 수 있도록 도와주는 멋진 웹 사이트 빌딩 도구',
-  url: 'https://your-docusaurus-test-site.com',
+
+  // 배포 설정
+  url: 'https://learn-docusaurus.netlify.com',
   baseUrl: '/',
+
   // 'ignore' | 'log' | 'warn' | 'error' | 'throw'
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -11,6 +14,15 @@ module.exports = {
   organizationName: 'yamoo9', // GitHub 조직/사용자_이름
   projectName: 'ducusaurus-learning-guide', // GitHub 저장소 이름
   themeConfig: {
+    // 알고리아 검색 설정
+    algolia: {
+      appId: 'LQSAM0X2GF',
+      // Search-Only API Key
+      apiKey: '7fb904901526f61b8febfa6db2594742',
+      indexName: 'learn-docusaurus',
+      contextualSearch: true,
+    },
+
     // 사이드바 감춤 설정 활성화
     hideableSidebar: true,
 
