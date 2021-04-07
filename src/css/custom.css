@@ -1,0 +1,58 @@
+/**
+ * 이 곳에 작성된 모든 CSS는 글로벌 스코프를 가집니다. 
+ * classic 템플릿은 기본적으로 Infima를 번들로 제공합니다. 
+ * Infima는 콘텐츠 중심 웹 사이트에서 잘 작동하도록 설계된 CSS 프레임 워크입니다.
+ */
+
+/* 
+  기본 Infima 변수를 재정의 할 수 있습니다.
+  참고: https://bit.ly/3fSh09Y
+*/
+:root {
+  --ifm-color-primary: #279f85;
+  --ifm-color-primary-dark: #238f78;
+  --ifm-color-primary-darker: #218771;
+  --ifm-color-primary-darkest: #1b6f5d;
+  --ifm-color-primary-light: #2baf92;
+  --ifm-color-primary-lighter: #2db799;
+  --ifm-color-primary-lightest: #34cdac;
+
+  --ifm-heading-color: #111;
+  --ifm-alert-color: #111;
+}
+
+/* 코드 하이라이팅 라인 -------------------------------------------------------------- */
+
+.docusaurus-highlight-code-line {
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+  background-color: #0f0f12;
+}
+
+/* 사용자 정의 CSS --------------------------------------------------------------- */
+
+.hero__title {
+  color: #fff;
+}
+
+.footer__links {
+  margin-bottom: 60px;
+}
+
+.alert--warning h5 {
+  color: #111;
+}
+
+
+
+/* 다크 모드 -------------------------------------------------------------------- */
+
+:root[data-theme='dark'] {
+  --ifm-heading-color: #fff;
+  --ifm-hero-text-color: #fff;
+}
+
+[data-theme='dark'] .hero__subtitle {
+  color: #fff;
+}
