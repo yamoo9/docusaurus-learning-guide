@@ -24,10 +24,11 @@ module.exports = {
         'intro-documentation',
         'intro-blog',
         'style-layout',
+        'algolia-search',
         // 중첩 사이드바 아이템 설정
-        // {
-        // 문서: ['intro-documentation'],
-        // },
+        {
+          '배포(Deploy)': ['deploy-netlify', 'deploy-github'],
+        },
       ],
     },
 

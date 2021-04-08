@@ -1,4 +1,5 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
+
 module.exports = {
   title: '도큐사우르스 러닝 가이드',
   tagline: '콘텐츠에 보다 집중할 수 있도록 도와주는 멋진 웹 사이트 빌딩 도구',
@@ -13,14 +14,17 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'yamoo9', // GitHub 조직/사용자_이름
   projectName: 'ducusaurus-learning-guide', // GitHub 저장소 이름
+
+  // 테마 구성
   themeConfig: {
-    // 알고리아 검색 설정
+    // algolia 검색 설정
     algolia: {
-      appId: 'LQSAM0X2GF',
       // Search-Only API Key
       apiKey: '7fb904901526f61b8febfa6db2594742',
       indexName: 'learn-docusaurus',
-      contextualSearch: true,
+      appId: 'LQSAM0X2GF',
+      // contextualSearch: true,
+      searchParameters: {},
     },
 
     // 사이드바 감춤 설정 활성화
@@ -29,19 +33,27 @@ module.exports = {
     // 사이드바 펼침/접힘 기능 비활성화
     // sidebarCollapsible: false,
 
-    // 내비게이션바
+    // 내비게이션 바
     navbar: {
       title: '도큐사우르스 러닝 가이드',
       logo: {
         alt: 'Docusaurus',
         src: 'img/logo.svg',
+        srcDark: 'img/docusaurus_speed.svg',
+        // href: 'https://docusaurus.io/',
+        // target: '_blank',
       },
       items: [
         {
-          to: 'docs/',
           activeBasePath: 'docs',
           label: '문서',
           position: 'right',
+          to: 'docs/',
+          // 서브 내비게이션 아이템 설정
+          // items: [
+          //   { label: '튜토리얼', to: 'docs/' },
+          //   { label: '가이드', to: 'docs/intro-documentation' },
+          // ],
         },
         { to: 'blog', label: '블로그', position: 'right' },
         {
@@ -56,6 +68,8 @@ module.exports = {
         },
       ],
     },
+
+    // 푸터
     footer: {
       style: 'dark',
       links: [
@@ -101,7 +115,16 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} 이듬(E.UID), Inc.`,
     },
+
+    // 코드 블록
+    // 참고: https://github.com/FormidableLabs/prism-react-renderer/tree/master/src/themes
+    prism: {
+      theme: require('prism-react-renderer/themes/duotoneDark'),
+      darkTheme: require('prism-react-renderer/themes/palenight'),
+    },
   },
+
+  // 프리셋 설정
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -130,4 +153,14 @@ module.exports = {
       },
     ],
   ],
+
+  // 플러그인 설정
+  // plugins: [
+  //   [
+  //     require.resolve('docusaurus-lunr-search'),
+  //     {
+  //       languages: ['en'],
+  //     },
+  //   ],
+  // ],
 }
