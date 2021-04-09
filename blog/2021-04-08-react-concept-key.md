@@ -2,7 +2,7 @@
 slug: important-key
 title: React의 key 속성을 다시 깨우치다.
 author: 한나
-author_title: 꿈꾸는 이쁜 여학생
+author_title: 꿈꾸는 프론트엔드 개발자
 author_url: https://github.com/hanna244
 author_image_url: https://github.com/hanna244.png
 tags: [react, key, props, pretty]

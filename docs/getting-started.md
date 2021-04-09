@@ -16,7 +16,7 @@ npx @docusaurus/init@latest init docusaurus-site classic
 생성된 `docusaurus-site` 디렉토리로 이동한 후, 개발 서버를 구동합니다.
 
 ```shell
-cd my-website && npm start
+cd docusaurus-site && npm start
 ```
 
 `docs/getting-started.md` 파일을 열고 내용을 수정/저장해보세요. 사이트가 자동으로 다시 로드되고 변경사항이 반영됩니다.
